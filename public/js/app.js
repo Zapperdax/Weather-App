@@ -16,7 +16,8 @@ weather.addEventListener('submit', (e)=> {
             messageTwo.textContent = '';
         } else {
             messageOne.textContent= '';
-            messageTwo.textContent = data.location + ' ' + data.currentWeather + ' ' + data.temperature + '° C';
+            messageTwo.textContent = data.location + ' ' + data.currentWeather + ' ' + data.temperature + '° C' +
+            ' Feels Like ' + data.feels_like + '° C Humidity:' + data.humidity + '%';
         }
         });
     });

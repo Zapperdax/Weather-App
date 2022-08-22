@@ -10,7 +10,9 @@ const weather = (address, callback) => {
             callback(undefined, {
                 location: res.body.name,
                 currentWeather: res.body.weather[0].main,
-                temperature: res.body.main.temp
+                temperature: res.body.main.temp,
+                feels_like: res.body.main.feels_like,
+                humidity: res.body.main.humidity
             });
         }
     });
