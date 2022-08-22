@@ -4,6 +4,9 @@ const path = require('path');
 const hbs = require('hbs');
 const app = express();
 
+//port
+const port = process.env.PORT || 2533;
+
 //Defining Paths
 const publicDirPath = path.join(__dirname, '../public');
 const templatePath = path.join(__dirname, '../templates/views');
@@ -96,6 +99,6 @@ app.get ('*', (req, res) => {
     })
 });
 
-app.listen(2533, () => {
-    console.log("Listening on port 2533");
+app.listen(port, () => {
+    console.log("Listening on port" + port);
 });
